@@ -7,9 +7,8 @@ const port = 3001;
 app.use(express.json());
 app.use('/api', ProductoRoutes);
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+const homeRoute = require('./homeRoute');
+app.get('/', homeRoute);
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);

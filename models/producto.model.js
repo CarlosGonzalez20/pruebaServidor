@@ -8,8 +8,18 @@ const ProductoEsquema = new mongoose.Schema({
     caracteristicas: {
         type: mongoose.Schema.Types.Mixed, 
         default: { 
-            "Procesador": "", 
-            "Tarjeta grafica": "" 
+            "Procesador": String, 
+            "Tarjeta grafica": String,
+            "Conexion": String,
+            "Pantalla": String,
+            "Almacenamiento": Number,
+            "Memoria RAM": Number,
+            "Sistema operativo": String,
+            "Peso": Number,
+            "Dimensiones": String,
+            "Color": String,
+            "Camaras": String,
+            "Bateria": Number
         }
     }
 });

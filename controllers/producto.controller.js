@@ -23,7 +23,7 @@ exports.getProductoID = async (req, res) => {
     res.status(200).json(productoID);
 }
 
-//Actualizar un usuario
+//Actualizar un producto por ID
 exports.updateProducto= async (req, res) => {
     const { id } = req.params;
     const productoUpdate = await Producto.findByIdAndUpdate(id, req.body, { new: true, runValidators: true });
@@ -32,7 +32,7 @@ exports.updateProducto= async (req, res) => {
     res.status(200).json(productoUpdate);
 }
 
-//Borrar un usuario
+//Borrar un producto por ID
 exports.deleteProducto = async (req, res) => {
     const { id } = req.params;
     const productoDelete = await Producto.findByIdAndDelete(id);
