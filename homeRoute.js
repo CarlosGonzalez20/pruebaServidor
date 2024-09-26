@@ -1,5 +1,8 @@
 // homeRoute.js
+
+// Define la función `homeRoute` que maneja las solicitudes GET a la ruta principal ('/').
 const homeRoute = (req, res) => {
+    // Envia una respuesta HTML simple que incluye contenido estilizado.
     res.send(`
         <!DOCTYPE html>
         <html lang="es">
@@ -52,6 +55,7 @@ const homeRoute = (req, res) => {
             <p>Explora las funcionalidades de nuestra API. Aquí puedes gestionar productos, obtener información detallada y mucho más.</p>
             <p>Visita nuestras rutas disponibles:</p>
             <ul>
+                <!-- Enlaces a las rutas de la API para visualizar todos los productos o añadir uno nuevo -->
                 <li><a href="/api/productos">Ver todos los productos</a></li>
                 <li><a href="/api/productos/nuevo">Añadir un nuevo producto</a></li>
             </ul>
@@ -63,5 +67,5 @@ const homeRoute = (req, res) => {
     `);
 };
 
-// Exporta la función para usarla en otros archivos
+// Exporta la función `homeRoute` para que pueda ser usada en otros módulos.
 module.exports = homeRoute;
